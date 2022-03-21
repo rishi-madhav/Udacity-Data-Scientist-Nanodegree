@@ -9,7 +9,7 @@
 For this project, I was interested to analyse an automotive insurance dataset and understand more about the Customer Lifetime Value(CLV) that they are able to derive from that.
 This is a dataset that I got from Kaggle, and since my current work deals with Data Analytics solutions for the automotive industry vertical, I felt this would be a relevant addition to the Data Science portfolio that I want to build.
 The broad questions I want to answer from this dataset are:
-* What are those features from the insurance business that influence the CLV?
+* What are the auto insurance business factors that influence CLV?
 * Does CLV depend on the the make, size or brand of a vehicle?
 * What is the typical demographic characteristic (age, marital status, employment status, etc.) that influences CLV?
 * How does feedback to Marketing influence CLV?
