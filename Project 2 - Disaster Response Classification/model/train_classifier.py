@@ -1,4 +1,5 @@
 import sys
+import re
 
 
 def load_data(database_filepath):
