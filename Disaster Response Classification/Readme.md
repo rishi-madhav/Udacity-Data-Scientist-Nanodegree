@@ -35,13 +35,13 @@ To classify these 35 categories, this application uses a machine learning pipeli
 
 The ADA Boost classifier showed the highest values in terms of the Accuracy metric. It was evaluated on a test dataset with the following results:
 
-accuracy                  0.948286
-macro_avg_precision       0.801429
-macro_avg_recall          0.636286
-macro_avg_f1              0.668000
-weighted_avg_precision    0.940857
-weighted_avg_recall       0.948286
-weighted_avg_f1           0.938286
+- accuracy                  0.948286
+- macro_avg_precision       0.801429
+- macro_avg_recall          0.636286
+- macro_avg_f1              0.668000
+- weighted_avg_precision    0.940857
+- weighted_avg_recall       0.948286
+- weighted_avg_f1           0.938286
 
 **Files**
 -------------------
