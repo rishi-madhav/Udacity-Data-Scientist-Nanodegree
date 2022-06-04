@@ -76,4 +76,8 @@ Run the following command in the app's directory to run your web app python run.
 
 Go to http://0.0.0.0:3000/
 
+**Plots visualized**
+
+![newplot (1)](https://user-images.githubusercontent.com/28513435/172015450-972279f3-9498-49c6-be4c-5768268855bc.png)
+
 
