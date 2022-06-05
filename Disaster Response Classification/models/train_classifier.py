@@ -111,7 +111,7 @@ def build_model():
     }
     # Create GridsearchCV
     cv = GridSearchCV(pipeline, param_grid=parameters, refit=True,
-                      cv=10, n_jobs=-1, verbose=1, return_train_score=True)
+                      cv=2, n_jobs=-1, verbose=1, return_train_score=True)
 
     return cv
 
@@ -129,24 +129,27 @@ def evaluate_model(model, X_test, Y_test, category_names):
     Returns:
     None
     """
-    pred = pd.DataFrame(model.predict(X_test), columns=category_names)
+    y_pred = model.predict(X_test)
+    Y_pred_pd = pd.DataFrame(y_pred, columns=category_names)
+    
+    print(classification_report(Y_test, y_pred, target_names = category_names))
 
-    metrics = []
-    for col in category_names:
+    #metrics = []
+    #for col in category_names:
         # Store metrics in a list
-        report = classification_report(Y_test[col], pred[col])
-        scores = report.split('accuracy')[1].split()
-        metrics.append([float(scores[i]) for i in [0, 4, 5, 6, 10, 11, 12]])
+     #   report = classification_report(Y_test[col], pred[col])
+     #   scores = report.split('accuracy')[0].split()
+     #   metrics.append([float(scores[i]) for i in [0, 4, 5, 6, 10, 11, 12]])
 
     # Convert metrics list into a Dataframe
-    metric_names = ['accuracy', 'macro_avg_precision', 'macro_avg_recall',
-                    'macro_avg_f1', 'weighted_avg_precision', 'weighted_avg_recall', 'weighted_avg_f1']
-    metrics_df = pd.DataFrame(
-        metrics, columns=metric_names, index=category_names)
+    #metric_names = ['accuracy', 'macro_avg_precision', 'macro_avg_recall',
+    #                'macro_avg_f1', 'weighted_avg_precision', 'weighted_avg_recall', 'weighted_avg_f1']
+    #metrics_df = pd.DataFrame(
+     #   metrics, columns=metric_names, index=category_names)
 
-    print(metrics_df)
-    print(metrics_df.sum)
-    return metrics_df
+    #print(metrics_df)
+    #print(metrics_df.sum)
+    #return metrics_df
 
 
 def save_model(model, model_filepath):
