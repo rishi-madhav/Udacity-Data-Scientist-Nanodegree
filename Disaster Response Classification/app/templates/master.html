@@ -6,39 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Disaster Response</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Disasters</title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
 <body>
-    <!--Navigation Bar-->
-    <nav class="navbar navbar-dark bg-dark">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="/">Disaster Response Project</a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="navbar-link" href="https://appen.com/datasets-resource-center/">Data</a>
-                </li>
-            </ul>
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">Disaster Response Project</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://www.udacity.com/">Made with Udacity</a></li>
+                    <li><a href="https://github.com/">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
-    <!--Main Banner-->
+
     <div class="jumbotron">
         <div class="container">
             <h1 class="text-center">Disaster Response Project</h1>
-            <p class="text-center">Classifying message data for disaster response</p>
+            <p class="text-center">Analyzing message data for disaster response</p>
             <hr />
 
-            <!--Input Form-->
             <div class="row">
                 <div class="col-lg-12 form-group-lg">
-                    <form action="/result" method="get">
+                    <form action="/go" method="get">
                         <input type="text" class="form-control form-control-lg" name="query"
                             placeholder="Enter a message to classify">
-                        <div class="mt-4 text-center">
+                        <div class="col-lg-offset-5">
                             <button type="submit" class="btn btn-lg btn-success">Classify Message</button>
                         </div>
                     </form>
@@ -50,37 +58,22 @@
         </div>
     </div>
 
-    <div class="container pb-5">
+    <div class="container">
         {% block content %}
-        <!--Section Title-->
         <div class="page-header">
             <h1 class="text-center">Overview of Training Dataset</h1>
         </div>
-
-        <!-- Plotly graphs -->
-        <div class="row">
-            {% for id in ids %}
-            <div id="{{id}}"> class="col-xs-3 col-lg-9 col-xl-6 offset-md-2 offset-lg-3 offset-xl-0"</div>
-            {% endfor %}
-        </div>
         {% endblock %}
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        {% for id in ids %}
+        <div id="{{id}}"></div>
+        {% endfor %}
+    </div>
 
     <script type="text/javascript">
         const graphs = {{ graphJSON | safe}};
         const ids = {{ ids | safe}};
-        for (let i in graphs) {
+        for (const i in graphs) {
             Plotly.plot(ids[i], graphs[i].data, graphs[i].layout);
         }
     </script>
