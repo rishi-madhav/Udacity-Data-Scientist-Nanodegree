@@ -131,6 +131,7 @@ def evaluate_model(model, X_test, Y_test, category_names):
     """
     y_pred = model.predict(X_test)
     Y_pred_pd = pd.DataFrame(y_pred, columns=category_names)
+<<<<<<< HEAD
 
     print(classification_report(Y_test, y_pred, target_names=category_names))
 
@@ -150,6 +151,27 @@ def evaluate_model(model, X_test, Y_test, category_names):
     # print(metrics_df)
     # print(metrics_df.sum)
     # return metrics_df
+=======
+    
+    print(classification_report(Y_test, y_pred, target_names = category_names))
+
+    #metrics = []
+    #for col in category_names:
+        # Store metrics in a list
+     #   report = classification_report(Y_test[col], pred[col])
+     #   scores = report.split('accuracy')[0].split()
+     #   metrics.append([float(scores[i]) for i in [0, 4, 5, 6, 10, 11, 12]])
+
+    # Convert metrics list into a Dataframe
+    #metric_names = ['accuracy', 'macro_avg_precision', 'macro_avg_recall',
+    #                'macro_avg_f1', 'weighted_avg_precision', 'weighted_avg_recall', 'weighted_avg_f1']
+    #metrics_df = pd.DataFrame(
+     #   metrics, columns=metric_names, index=category_names)
+
+    #print(metrics_df)
+    #print(metrics_df.sum)
+    #return metrics_df
+>>>>>>> 8f3c55f697389df6349f2cb1c693d23058d82852
 
 
 def save_model(model, model_filepath):
