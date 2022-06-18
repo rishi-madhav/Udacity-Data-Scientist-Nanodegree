@@ -6,11 +6,11 @@ This contains my first hands-on attempt at developing a Recommendation engine us
 
 ## Contents
 
-I. Exploratory Data Analysis
-II. Rank Based Recommendations
-III. User-User Based Collaborative Filtering
-IV. Matrix Factorization
-V. Extras & Concluding
+- Exploratory Data Analysis
+- Rank Based Recommendations
+- User-User Based Collaborative Filtering
+- Matrix Factorization
+- Extras & Concluding
 
 ## Libraries used
 - Libraries Used:
