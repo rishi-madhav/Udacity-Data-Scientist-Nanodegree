@@ -1,20 +1,21 @@
-## Predicting Credit Rating for a company
+# Predicting Credit Rating for a company
 
-# Section 1: Project Definition
-
-
-
-# Section 2: Analysis
+## Section 1: Project Definition
 
 
 
-# Section 3: Methodology
+## Section 2: Analysis
 
 
 
-# Section 4: Results
+## Section 3: Methodology
 
 
-# Section 5: Conclusion
+
+## Section 4: Results
+
+
+
+## Section 5: Conclusion
 
 
