@@ -1,6 +1,6 @@
 # Classification of Corporate Credit Ratings 
 
-This repository contains the results of a data analysis performed on a set of corporate credit ratings given by ratings agencies to a set of companies. The aim of the data analysis is to build a machine learning model from the rating data that can be used to predict the rating a company will receive.
+This repository contains the results of a data analysis performed on a set of corporate credit ratings given by ratings agencies to a set of companies. The aim of the data analysis is to build a machine learning model from the rating data that can be used to predict the rating a company will receive. This is part of the Udacity Data Science Nanodegree capstone project. There is a <a href=https://medium.com/@rishi.madhav/classification-of-corporate-credit-ratings-and-identify-the-top-financial-ratios-f4796e215cbd>Medium blog post</a> as well as part of the submission.
 
 ## Dataset
 The dataset was generated with the file GenerateDataset.py. It makes use of an original dataset from Kaggle and Web Scraping exercise to combine this with a Standard Industry Classification table in Wikipedia. Reference links are provided in the acknowledgement section.
