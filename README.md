@@ -1,6 +1,8 @@
 ## Udacity-Data-Scientist-Nanodegree
 This repository contains my projects for Udacity's Data Scientist Nanodegree. It was a great 3 months of a steep learning curve! On to more learnings and advanced topics! And most importantly, building out a project portfolio like this one!
 
+https://github.com/rishi-madhav/Udacity-Data-Scientist-Nanodegree/blob/bc47000835f118a099e0ad3f99f32a11bb82521e/Udacity%20Data%20Scientist%20Nanodegree.pdf
+
 # Key concepts and lessons covered
 1. Introduction to Data Science: Completed a Data Science project of my own choice with the basic concepts covered in this section. I worked on Predicting Customer Lifetime Value (Auto Insurance). I have written a <a href=https://medium.com/@rishi.madhav/can-data-make-you-drive-happily-45d91e9cf7be>Medium blog post</a> that talks about the process.
 
