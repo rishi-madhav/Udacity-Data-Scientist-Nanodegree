@@ -7,11 +7,11 @@ The dataset was generated with the file GenerateDataset.py. It makes use of an o
 
 There are 25 features for every company of which 16 are financial indicators. They can be divided in:
 
-Liquidity Measurement Ratios: CurrentRatio 
-Profitability Indicator Ratios: EBIT margin, EBIDTA margin, GrossMargin, OperatingMargin, PretaxProfitMargin, NetProfitMargin, ReturnOnAssets, ReturnOnEquity, ReturnOnTangibleEquity,ReturnOnInvestment
-Debt Ratios: LongtermDebt/Capital, DebtEquityRatio
-Operating Performance Ratios: AssetTurnover
-Cash Flow Indicator Ratios: OperatingCashFlowPerShare, freeCashFlowPerShare
+- Liquidity Measurement Ratios:     CurrentRatio 
+- Profitability Indicator Ratios:   EBIT margin, EBIDTA margin, GrossMargin, OperatingMargin, PretaxProfitMargin, NetProfitMargin, ReturnOnAssets,    ReturnOnEquity, ReturnOnTangibleEquity,ReturnOnInvestment
+- Debt Ratios: LongtermDebt/Capital, DebtEquityRatio
+- Operating Performance Ratios: AssetTurnover
+- Cash Flow Indicator Ratios: OperatingCashFlowPerShare, freeCashFlowPerShare
 
 ## Results
 Achieved an accuracy of 78.15 with an XGboost model post hyperparameter tuning.
@@ -21,9 +21,8 @@ Achieved an accuracy of 78.15 with an XGboost model post hyperparameter tuning.
 Next steps should be:
 1. Employ data balancing techniques to see if we can achieve a higher accuracy
 2. Build a web app and host it on the cloud
+3. Build a word cloud to visualize corporations for each risk rating classification
 
 ## Acknowledgments
 Original Datasource: <a href=https://www.kaggle.com/datasets/kirtandelwadia/corporate-credit-rating-with-financial-ratios>Kaggle</a>
-
-
-
+References: <a href=https://www.investopedia.com/articles/03/102203.asp>Investopedia</a>, <a href=https://blog.cambridgespark.com/hyperparameter-tuning-in-xgboost-4ff9100a3b2f>XGBoost Tuning</a>, <a href=https://www.analyticsvidhya.com/blog/2016/03/complete-guide-parameter-tuning-xgboost-with-codes-python/>Analytics Vidhya</a>
