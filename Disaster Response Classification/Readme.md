@@ -92,7 +92,3 @@ Go to http://0.0.0.0:3000/
 1. Improve the ML pipeline to check other classification algorithms and identify the most accurate one
 2. Improve the design of the web application and plot more visualizations for better insights into the data
 3. Learn and improve on the NLP algorithms to see how better the messages can be classified to ensure in a real-life scenario, the correct and relevant help can be dispatched based on the message.
-
-
-
-
